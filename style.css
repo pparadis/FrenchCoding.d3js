@@ -1,0 +1,26 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 960px;
+}
+
+.axis text {
+  font: 10px sans-serif;
+}
+
+.axis path, .axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.bar {
+}
+
+.x.axis path {
+  display: none;
+}
+
+.bar-color {
+    font: 10px sans-serif;
+    text-anchor: start;
+}
