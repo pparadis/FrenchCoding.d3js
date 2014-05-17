@@ -21,10 +21,11 @@ var xAxis = d3.svg.axis()
 var y = d3.scale.linear()
     .range([height, 0]);
 
+var currencyFormat = d3.format("$");
 var yAxis = d3.svg.axis()
     .scale(y)
     .orient("left")
-    .tickFormat(d3.format("$"));
+    .tickFormat(currencyFormat);
 
 //création de l'élément SVG du document
 var svg = d3
@@ -81,7 +82,7 @@ d3.tsv("data.tsv", function (error, data) {
         })
         .attr("dy", ".35em")
         .attr("fill", "black")
-        .text(function (d) { return d.cout; });
+        .text(function (d) { return currencyFormat(d.cout); });
 
     //positionnement de l'axe des X
     svg.append("g")
